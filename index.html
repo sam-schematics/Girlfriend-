@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Queenie 💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffe4e1);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            color: #4a0e1b;
+        }
+
+        /* Floating Hearts Animation */
+        .heart {
+            position: fixed;
+            bottom: -100px;
+            background-color: #ff4d6d;
+            width: 20px;
+            height: 20px;
+            transform: rotate(-45deg);
+            animation: floatUp 10s infinite ease-in;
+            z-index: 0;
+        }
+        .heart::before, .heart::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff4d6d;
+            border-radius: 50%;
+        }
+        .heart::before { top: -10px; left: 0; }
+        .heart::after { top: 0; left: 10px; }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1) rotate(-45deg); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.5) rotate(-45deg); opacity: 0; }
+        }
+
+        /* Welcome Screen */
+        #welcome-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            transition: opacity 1.5s ease-out;
+        }
+
+        .open-btn {
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: 'Dancing Script', cursive;
+            box-shadow: 0 10px 20px rgba(255, 77, 109, 0.4);
+            animation: pulse 2s infinite;
+            transition: transform 0.3s;
+        }
+
+        .open-btn:hover { transform: scale(1.1); }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 77, 109, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 77, 109, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 77, 109, 0); }
+        }
+
+        /* Main Content */
+        #main-content {
+            display: none;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            z-index: 10;
+            position: relative;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            text-align: center;
+            color: #d90429;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ff4d6d;
+            border-bottom: 2px dashed #ffb6c1;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        ul { list-style-type: none; padding: 0; }
+        
+        li {
+            background: #fff0f3;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid #ff4d6d;
+        }
+
+        strong { color: #d90429; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            #main-content { margin: 20px; padding: 25px; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hidden YouTube Player -->
+    <div id="player" style="display:none;"></div>
+
+    <!-- Welcome Screen -->
+    <div id="welcome-screen">
+        <button class="open-btn" onclick="openSurprise()">Tap to open your surprise,,, Queenie 💕</button>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1>Happy Girlfriend's Day,,, my beautiful Queenie!</h1>
+        
+        <p>Even though miles and different towns are keeping us apart today,,, I wanted to take a moment to pause and celebrate you ,,,, and us.</p>
+        
+        <p>Long distance isn't always easy,,, but having you in my life makes every bit of effort worth it. I don't just love you for who you are; I love the partnership we share,,, our ambitions of building our corporate empire together,,, and the way we back each other up. You inspire me,,, my CEO,,, you bring out my best,,, and you make the future look incredible.</p>
+        
+        <p>Four months feels like a long wait right now,,, but distance is temporary. What we’re building together is what lasts. Thank you for being my favorite person,,, my sweet honey,,, my biggest support,,, and my home.</p>
+        
+        <p>I’m counting down the days until I see you. To give us something real to look forward to,,, I’ve already planned our exact date for the moment we’re back together ,,,, check out the blueprint below.</p>
+        
+        <h2>The Reunion Date Blueprint</h2>
+        
+        <ul>
+            <li><strong>1. The Vibe & Atmosphere</strong><br>
+            <strong>Bedsitter Sanctuary:</strong> Turning our room into a private,,, cozy paradise. Clean space,,, soft music,,, and warm lighting just for you.<br>
+            <strong>Zero Distractions:</strong> Phones on silent and put aside. Total,,, uninterrupted focus on you,,, my love.</li>
+            
+            <li><strong>2. The Royal Menu & Reunion Toast</strong><br>
+            <strong>Chef’s Special:</strong> I'll handle the cooking entirely. Preparing your favorite Fish Dish alongside some delicious Chicken.<br>
+            <strong>VIP Service:</strong> You won't lift a finger,,, honey. Food will be served to you right at your comfort spot,,, making you feel truly cherished on your special day.<br>
+            <strong>The 4,,,,Month Toast:</strong> Raising a glass of a sweet drink to celebrate surviving 4 full months apart and finally being back in each other's arms.</li>
+            
+            <li><strong>3. The Unwind,,, Gifts & Soft Moments</strong><br>
+            <strong>The Gift Reveal:</strong> Setting aside time to hand over and unwrap the special gifts I bought for you while away.<br>
+            <strong>Cozy Catch,,,,up & Movie:</strong> Curled up on the bed together,,, talking,,, laughing,,, and watching our favorite show.<br>
+            <strong>The Best Part:</strong> Ending the night with you falling asleep warm and cozy right in my arms ,,,, just quiet,,, peaceful,,, and back where you belong.</li>
+        </ul>
+    </div>
+
+    <script>
+        // 1. Generate Floating Hearts
+        function createHearts() {
+            for(let i = 0; i < 20; i++) {
+                let heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                document.body.appendChild(heart);
+            }
+        }
+        createHearts();
+
+        // 2. Load the YouTube IFrame API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. Create the hidden YouTube player once the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '0',
+                width: '0',
+                videoId: '2Vv-BfVoq4g', // YouTube ID for Ed Sheeran - Perfect
+                playerVars: {
+                    'autoplay': 0,
+                    'controls': 0,
+                    'start': 162 // Starts exactly at the chorus
+                }
+            });
+        }
+
+        // 4. Handle Button Click (Plays music and reveals website)
+        function openSurprise() {
+            const welcome = document.getElementById('welcome-screen');
+            const main = document.getElementById('main-content');
+            
+            // Play the YouTube audio
+            if (player && typeof player.playVideo === 'function') {
+                player.playVideo();
+            }
+            
+            // Fade out welcome screen and show content
+            welcome.style.opacity = '0';
+            setTimeout(() => {
+                welcome.style.display = 'none';
+                main.style.display = 'block';
+            }, 1000);
+        }
+    </script>
+</body>
+  </html>
+
